@@ -10,7 +10,7 @@ This feature fetches and displays a list of posts from the [JSONPlaceholder](htt
 
 *   **Shared Data Layer:** The `PostModel` and `PostRepository` are defined in the `shared` module and are used by both the Android and Desktop apps.
 *   **Shared Presentation Layer:** The `PostViewModel` is also in the `shared` module and contains the business logic for fetching and managing the list of posts.
-*   **Shared UI Layer:** The UI is built with Compose Multiplatform and is shared between the Android and Desktop apps. The `PostListScreen` and `PostItem` composables are defined in the `composeApp` module.
+*   **UI Layer:** The UI for Android and Desktop is built with Compose Multiplatform and is shared between them. The `PostListScreen` and `PostItem` composables are defined in the `composeApp` module. The iOS app, on the other hand, uses a native SwiftUI implementation. It features a `PostListView` that observes a `PostViewModel` to display the list of posts, demonstrating a clean MVVM architecture.
 *   **Networking:** The project uses [Ktor](https://ktor.io/) for making network requests and [Kotlinx Serialization](https://github.com/Kotlin/kotlinx.serialization) for parsing JSON.
 
 ## Project Structure
@@ -97,7 +97,7 @@ in your IDE’s toolbar or run it directly from the terminal:
 ### Build and Run iOS Application
 
 To build and run the development version of the iOS app, use the run configuration from the run widget
-in your IDE’s toolbar or open the [/iosApp](./iosApp) directory in Xcode and run it from there.
+in your IDE’s toolbar or open the [/iosApp](./iosApp) directory in Xcode and.
 
 ---
 
